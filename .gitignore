@@ -1,0 +1,136 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.py[cod]
+*.so
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+*.env
+.env.*
+!env.example.txt
+*.key
+*.pem
+*secret*
+*credential*
+password.txt
+passwords.txt
+*.password
+config.json
+secrets.json
+# Allow passwordValidator.js (it's a utility, not a credential file)
+!**/passwordValidator.js
+
+# IDE and Editor files
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.code-workspace
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+*.egg
+*.whl
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+ENV/
+env/
+.python-version
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.npm
+.eslintcache
+.stylelintcache
+
+# Vite
+.vite/
+dist-ssr/
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+.nox/
+# Block test files but allow utility test scripts
+*test*.py
+!scripts/test_connection.py
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+*.bak
+*.swp
+*~
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+lerna-debug.log*
+
+# Deployment
+.vercel
+.netlify
+.now
+
+# Misc
+*.exe
+*.dll
+*.dylib
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
