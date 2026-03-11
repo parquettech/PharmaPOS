@@ -69,7 +69,8 @@ apiClient.interceptors.request.use(
           
           // Only redirect if not already on login page
           if (window.location.pathname !== '/login') {
-            window.location.href = '/login'
+            // Use pathname instead of href to avoid showing full URL
+            window.location.pathname = '/login'
           }
           
           return Promise.reject(new Error('Token expired'))
@@ -104,7 +105,7 @@ apiClient.interceptors.response.use(
       }
       
       // Create a more descriptive error
-      const networkError = new Error('Unable to connect to server. Please check if the backend is running on http://localhost:3000')
+      const networkError = new Error('Unable to connect to server. Please check if the backend is running and accessible.')
       networkError.isNetworkError = true
       networkError.originalError = error
       return Promise.reject(networkError)
@@ -123,7 +124,8 @@ apiClient.interceptors.response.use(
       
       // Only redirect if not already on login page
       if (window.location.pathname !== '/login' && window.location.pathname !== '/signup') {
-        window.location.href = '/login'
+        // Use pathname instead of href to avoid showing full URL
+        window.location.pathname = '/login'
       }
     }
     
@@ -136,7 +138,8 @@ apiClient.interceptors.response.use(
       localStorage.removeItem('tokenExpiresAt')
       
       if (window.location.pathname !== '/login' && window.location.pathname !== '/signup') {
-        window.location.href = '/login'
+        // Use pathname instead of href to avoid showing full URL
+        window.location.pathname = '/login'
       }
     }
     
